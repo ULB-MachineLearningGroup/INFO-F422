@@ -12,7 +12,9 @@ html:
     favicon: sfml.png
     home_page_in_navbar: true
     extra_footer: "This is the practicals handbook for the course INFO-F422 - Statistical Foundations of Machine Learning. This is intended to be used alongside the <a href='https://www.researchgate.net/publication/242692234_Statistical_foundations_of_machine_learning_the_handbook'> theoretical handbook</a>."
-
+    theme: light
+    theme_options:
+        light_mode: true
 execute:
   execute_notebooks: force
   timeout: -1
