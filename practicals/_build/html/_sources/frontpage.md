@@ -14,5 +14,5 @@ The 2024-2025 teaching staff is made of:
 ```{tableofcontents}
 ```
 
-## Mistakes, remarks, or compliments
+## Mistakes, Remarks, or Compliments
 For anything you would like to share to the team, feel free to write an e-mail to [Pascal Tribel](mailto:pascal.tribel@ulb.be).

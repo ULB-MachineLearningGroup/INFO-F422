@@ -61,7 +61,7 @@
     <link rel="icon" href="_static/sfml.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Data preprocessing and tree-based models" href="03.html" />
+    <link rel="next" title="4. Data Preprocessing, Local Models and Tree-Based Models" href="03.html" />
     <link rel="prev" title="2. Introduction to probabilistic methods and Monte Carlo simulations" href="01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -184,7 +184,7 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01.html">2. Introduction to probabilistic methods and Monte Carlo simulations</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Linear Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03.html">4. Data preprocessing and tree-based models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.html">4. Data Preprocessing, Local Models and Tree-Based Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04.html">5. Neural Networks for Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05.html">6. Ensembles of models and feature selection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06.html">7. Classification</a></li>
@@ -409,7 +409,7 @@ document.write(`
 <p>In this chapter, we explore the principles and practical implementation of linear models. We begin with the generation of synthetic multivariate data to simulate a controlled environment for experimentation. We then dive into the manual computation of the Ordinary Least Squares (OLS) solution using matrix algebra, before comparing our results to those produced by well-established Python libraries such as <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code>.</p>
 <p>The chapter also highlights the importance of residual analysis for model diagnostics, offering tools to detect violations of assumptions like linearity, homoscedasticity, and normality. We further extend the linear model framework through input transformations, allowing us to capture non-linear patterns while preserving the model’s linear structure in parameters.</p>
 <p>Finally, we introduce <strong>Ridge Regression</strong>, a regularized variant of linear regression, and examine its role in mitigating overfitting—particularly in scenarios involving multicollinearity or high-dimensional input spaces.</p>
-<p>We assume basic familiarity with matrix algebra and Python packages such as <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, and <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code>.</p>
+<p>We now assume basic familiarity with matrix algebra and Python packages such as <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>, <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>, and <code class="docutils literal notranslate"><span class="pre">Statsmodels</span></code>.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Don’t forget: if some of those libraries are not installed on your computer, you can always install them using <a class="reference external" href="http://pypi.org">Pip</a>.</p>
@@ -581,7 +581,7 @@ min     -4.973119   -9.929356   -5.262876  -20.342999
 max      4.953585    9.921727    4.501352   30.849943
 </pre></div>
 </div>
-<img alt="_images/b2c0c6da7978112d0a22c84a07f5a159a6e2ef3bbe5890fcde211f9eb0829c18.png" src="_images/b2c0c6da7978112d0a22c84a07f5a159a6e2ef3bbe5890fcde211f9eb0829c18.png" />
+<img alt="_images/33c2c9257cd83474d9472f1b37ed64adc4e30915eb0e45a8df264c60d89c7fd0.png" src="_images/33c2c9257cd83474d9472f1b37ed64adc4e30915eb0e45a8df264c60d89c7fd0.png" />
 </div>
 </div>
 </section>
@@ -692,7 +692,7 @@ Dep. Variable:                      Y   R-squared:                       0.976
 Model:                            OLS   Adj. R-squared:                  0.976
 Method:                 Least Squares   F-statistic:                     2657.
 Date:                Sat, 12 Apr 2025   Prob (F-statistic):          2.01e-158
-Time:                        19:12:17   Log-Likelihood:                -415.03
+Time:                        23:29:18   Log-Likelihood:                -415.03
 No. Observations:                 200   AIC:                             838.1
 Df Residuals:                     196   BIC:                             851.2
 Df Model:                           3                                         
@@ -967,7 +967,7 @@ Dep. Variable:                      Y   R-squared:                       0.976
 Model:                            OLS   Adj. R-squared:                  0.975
 Method:                 Least Squares   F-statistic:                     872.4
 Date:                Sat, 12 Apr 2025   Prob (F-statistic):          2.13e-149
-Time:                        19:12:18   Log-Likelihood:                -413.46
+Time:                        23:29:19   Log-Likelihood:                -413.46
 No. Observations:                 200   AIC:                             846.9
 Df Residuals:                     190   BIC:                             879.9
 Df Model:                           9                                         
@@ -1100,13 +1100,15 @@ y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 + \beta_4 X_1^2 + \beta_5 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RBF-transformed shape: (200, 50)
-                            OLS Regression Results                            
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      Y   R-squared:                       0.980
 Model:                            OLS   Adj. R-squared:                  0.973
 Method:                 Least Squares   F-statistic:                     146.9
 Date:                Sat, 12 Apr 2025   Prob (F-statistic):          5.70e-105
-Time:                        19:12:18   Log-Likelihood:                -396.22
+Time:                        23:29:20   Log-Likelihood:                -396.22
 No. Observations:                 200   AIC:                             894.4
 Df Residuals:                     149   BIC:                             1063.
 Df Model:                          50                                         
@@ -1360,7 +1362,7 @@ Ridge regression adds an L2 penalty:</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Data preprocessing and tree-based models</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Data Preprocessing, Local Models and Tree-Based Models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

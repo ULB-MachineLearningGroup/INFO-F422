@@ -44,7 +44,7 @@ From classical regression to more flexible transformations:
 
 ---
 
-### Preprocessing and Tree-Based Models
+### Preprocessing, Local Models and Tree-Based Models
 Preparing your data and working with interpretable machine learning models:
 - Data preprocessing: normalization, handling missing data
 - **k-Nearest Neighbors (kNN)** for regression
