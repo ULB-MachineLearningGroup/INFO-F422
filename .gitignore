@@ -1,2 +1,18 @@
+# Ignore entire folders
+Practicals/facial-keypoints-detection/
+Practicals/movies_data/
+Practicals/without_solutions/
+Practicals/Zips_for_UV/
+
+# Ignore data and model files
 *.csv
+*.zip
 *.pth
+
+# Ignore Python artifacts
+*.pyc
+__pycache__/
+
+# Ignore Jupyter notebook checkpoints (recursive)
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/

@@ -1,0 +1,33 @@
+title: Statistical Foundations of Machine Learning - Practicals handbook
+author: Tribel Pascal, Simar Cédric, Bontempi Gianluca
+copyright: "2025"
+logo: sfml.png
+exclude_patterns: ["_build/", "R_Practicals/", "without_solutions/", "Zips_for_UV/", "facial-keypoints-detection/", "movies_data/", "**.ipynb_checkpoints"]
+only_build_toc_files: true
+
+parse:
+    myst_dmath_double_inline: true
+
+html:
+    favicon: sfml.png
+    home_page_in_navbar: true
+    extra_footer: "This is the practicals handbook for the course INFO-F422 - Statistical Foundations of Machine Learning. This is intended to be used alongside the <a href='https://www.researchgate.net/publication/242692234_Statistical_foundations_of_machine_learning_the_handbook'> theoretical handbook</a>."
+
+execute:
+  execute_notebooks: force
+  timeout: -1
+
+latex:
+  latex_documents:
+    targetname: sfml_practical_handbook.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    image_converter.output_format: 'jpg'
+
+jupyter:
+  config:
+    InlineBackend.figure_format: 'jpg'
