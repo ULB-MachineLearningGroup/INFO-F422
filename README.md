@@ -2,7 +2,7 @@
 Statistical foundations of machine learning <br />
 (5 ECTS: Theory : 24h, Exercises : 12h) <br />
 
-Pr. G. Bontempi  
+- Pr. G. Bontempi  
 
 Course objectives:
 
