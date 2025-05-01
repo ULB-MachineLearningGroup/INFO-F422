@@ -23,12 +23,12 @@ latex:
   latex_documents:
     targetname: sfml_practical_handbook.tex
 
-bibtex_bibfiles:
-  - references.bib
-
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.bibtex
   config:
     image_converter.output_format: 'jpg'
+    bibtex_bibfiles: ["references.bib"]
 
 jupyter:
   config:
